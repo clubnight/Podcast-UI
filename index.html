@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast UI</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-menu">
+            <a class="header-logo" href="/">
+                <img src="./images/logo.png" alt="Podcast logo" width="130" height="20" loading="lazy">
+            </a>
+            <nav class="header-navigation">
+                <ul class="header-navigation-list">
+                    <li class="header-navigation-item">
+                        <a class="header-navigation-link is-current" href="/">Homes</a>
+                    </li>
+                    <li class="header-navigation-item">
+                        <a class="header-navigation-link" href="/">Pages</a>
+                    </li>
+                    <li class="header-navigation-item">
+                        <a class="header-navigation-link" href="/">Podcast</a>
+                    </li>
+                    <li class="header-navigation-item">
+                        <a class="header-navigation-link" href="/">Blog</a>
+                    </li>
+                    <li class="header-navigation-item">
+                        <a class="header-navigation-link" href="/">Shop</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <form class="header-actions-form">
+                    <input type="search" class="header-actions-search-input" placeholder="Search">
+                    <button type="submit" class="header-actions-search-button">
+                        <svg class="header-actions-search-button-img" fill="#000000" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                            xml:space="preserve">
+                            <path
+                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                    </button>
+                </form>
+                <button class="header-actions-button" type="button" title="Open Menu">
+                    <span class="visually-hidden">Open Menu</span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                    <span class="header-actions-button-point"></span>
+                </button>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="hero">
+            <img class="hero-image" src="./images/hero.jpg" alt="hero" width="1920" height="900" loading="lazy">
+            <div class="hero-info">
+                <h1 class="hero-info-title">New episode<br>
+                    available now</h1>
+                <p class="hero-info-description">Available on Apple Soundcast and Spotify.</p>
+                <div class="hero-info-link">
+                    <a href="/">
+                        <img class="hero-info-link-image" src="./icons/apple.png" alt="apple-podcast" width="185"
+                            height="54" loading="lazy">
+                    </a>
+                    <a href="/">
+                        <img class="hero-info-link-image" src="./icons/soundcloud.png" alt="apple-podcast" width="174"
+                            height="54" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="podcast container-podcast">
+            <img class="podcast-image" src="./images/image-player.jpg" alt="photo from the show" width="291"
+                height="291" loading="lazy">
+            <h2 class="visually-hidden">Podcast now</h2>
+            <div class="podcast-show">
+                <h3 class="podcast-show-title">Timmy Mike: the nature<br> of design</h3>
+                <div class="podcast-show-description play-description">
+                    <p>Episode 1 • Microphone • 0:13</p>
+                </div>
+            </div>
+            <a class="podcast-link next-play link-episod" href="/">Episode page</a>
+            <div class="podcast-player-wrapper">
+                <div class="podcast-player">
+                    <button class="podcast-player-button button-static play-button" type="button"></button>
+                    <span class="podcast-play-time play-description">10s</span>
+                    <span class="podcast-play-time play-description">10s</span>
+                    <div class="podcast-play-line"></div>
+                    <span class="podcast-play-time-all play-description">00:00 / 00:00</span>
+                    <svg class="podcast-play-volume-image" fill="#000000" width="23" height="30" viewBox="0 0 56 56"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g>
+                            <path
+                                d="M 48.1605 48.9342 C 48.8765 49.4181 49.8252 49.2245 50.3865 48.4309 C 53.9286 43.3593 56.0000 36.8360 56.0000 29.9255 C 56.0000 23.0151 53.9096 16.4724 50.3865 11.4008 C 49.8252 10.6072 48.8765 10.4136 48.1605 10.9169 C 47.4248 11.4202 47.3086 12.3880 47.8700 13.2010 C 50.9863 17.7887 52.9221 23.6732 52.9221 29.9255 C 52.9221 36.1779 51.0446 42.1398 47.8700 46.6500 C 47.3086 47.4437 47.4248 48.4115 48.1605 48.9342 Z M 21.6412 47.5985 C 22.9575 47.5985 23.9060 46.6307 23.9060 45.3338 L 23.9060 14.4592 C 23.9060 13.1623 22.9575 12.0783 21.6025 12.0783 C 20.6540 12.0783 20.0152 12.5042 18.9893 13.4720 L 10.4528 21.5439 C 10.3173 21.6601 10.1431 21.7181 9.9495 21.7181 L 4.2005 21.7181 C 1.4711 21.7181 0 23.2086 0 26.1122 L 0 33.6227 C 0 36.5263 1.4711 38.0168 4.2005 38.0168 L 9.9495 38.0168 C 10.1431 38.0168 10.3173 38.0748 10.4528 38.1910 L 18.9893 46.3403 C 19.9184 47.2114 20.6927 47.5985 21.6412 47.5985 Z M 40.3595 43.6497 C 41.1143 44.1530 42.0436 43.9594 42.5855 43.1851 C 45.1405 39.6234 46.6117 34.8809 46.6117 29.9255 C 46.6117 24.9508 45.1599 20.2083 42.5855 16.6466 C 42.0242 15.8917 41.1143 15.6981 40.3595 16.2014 C 39.6238 16.7047 39.5076 17.6532 40.0884 18.4855 C 42.1982 21.5826 43.4953 25.6476 43.4953 29.9255 C 43.4953 34.2034 42.2370 38.3072 40.0690 41.3656 C 39.5270 42.1979 39.6238 43.1464 40.3595 43.6497 Z M 32.6360 38.4233 C 33.2941 38.8878 34.2426 38.7330 34.8039 37.9781 C 36.3139 35.9456 37.2238 32.9646 37.2238 29.9255 C 37.2238 26.8865 36.2945 23.9249 34.8039 21.8536 C 34.2426 21.0987 33.3135 20.9439 32.6360 21.4084 C 31.7843 21.9698 31.6875 22.9570 32.3069 23.8087 C 33.4296 25.3185 34.1071 27.6221 34.1071 29.9255 C 34.1071 32.2290 33.3909 34.5325 32.2876 36.0617 C 31.7068 36.8941 31.8037 37.8426 32.6360 38.4233 Z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="episod container-podcast">
+            <div class="episod-body">
+                <h2 class="episod-title">Best places to<br> find design<br> inspiration</h2>
+                <div class="episod-player-wrapper">
+                    <button class="episod-player-button button-static play-button" type="button"></button>
+                    <div class="episod-player-show">
+                        <h3 class="episod-player-show-title">Episode 1</h3>
+                        <p class="episod-player-show-description play-description">Category • 0:13</p>
+                    </div>
+                </div>
+                <div class="episod-description about">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip. <br>
+                        Ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui
+                        officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <a class="episod-link next-play link-episod" href="/">Episode page</a>
+            </div>
+            <img class="episod-image" src="./images/episod-image.jpg" alt="episod-image" width="525" height="519"
+                loading="lazy">
+        </section>
+        <section class="guests">
+            <header class="guests-header">
+                <h2 class="guests-header-title">Top <br> podcasts:</h2>
+                <div class="guests-header-description">
+                    <p>Discover the selection of the most popular podcasts.</p>
+                </div>
+            </header>
+            <div class="guests-body">
+                <div class="guests-body-items container-guest container-shadow">
+                    <img class="guests-image" src="./images/guests-1.jpg" alt="guests-image" width="392" height="392"
+                        loading="lazy">
+                    <span class="guests-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Podcast-description</h3>
+                    <div class="guests-description">
+                        <div class="guests-description-episod play-description">
+                            <p>Episode 7 • Technology</p>
+                        </div>
+                        <h4 class="guests-description-title episod-title-line">SRKP selects: open your <br> mind easy
+                        </h4>
+                        <a class="guests-description-link next-play link-episod" href="/">Episode page</a>
+                    </div>
+                </div>
+                <div class="guests-body-items container-guest container-shadow">
+                    <img class="guests-image" src="./images/guests-2.jpg" alt="guests-image" width="392" height="392"
+                        loading="lazy">
+                    <span class="guests-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Podcast-description</h3>
+                    <div class="guests-description">
+                        <div class="guests-description-episod play-description">
+                            <p>Episode 8 • Technology</p>
+                        </div>
+                        <h4 class="guests-description-title episod-title-line">SRKP selects: keep your <br> watch</h4>
+                        <a class="guests-description-link next-play link-episod" href="/">Episode page</a>
+                    </div>
+                </div>
+                <div class="guests-body-items container-guest container-shadow">
+                    <img class="guests-image" src="./images/guests-3.jpg" alt="guests-image" width="392" height="392"
+                        loading="lazy">
+                    <span class="guests-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Podcast-description</h3>
+                    <div class="guests-description">
+                        <div class="guests-description-episod play-description">
+                            <p>Episode 9 • Technology</p>
+                        </div>
+                        <h4 class="guests-description-title episod-title-line">SRKP selects: to hide <br> behind safe
+                        </h4>
+                        <a class="guests-description-link next-play link-episod" href="/">Episode page</a>
+                    </div>
+                </div>
+            </div>
+            <div class="guests-pagination">
+                <ul class="guests-pagination-list">
+                    <li class="guests-pagination-item">
+                        <button class="guests-pagination-button" type="button"></button>
+                    </li>
+                    <li class="guests-pagination-item">
+                        <button class="guests-pagination-button guests-is-current xx" type="button"></button>
+                    </li>
+                    <li class="guests-pagination-item">
+                        <button class="guests-pagination-button" type="button"></button>
+                    </li>
+                    <li class="guests-pagination-item">
+                        <button class="guests-pagination-button" type="button"></button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="essential">
+            <header class="essential-header container-podcast">
+                <h2 class="essential-header-title">Essential episodes:</h2>
+                <a class="essential-link next-play link-episod" href="/">View all episodes</a>
+            </header>
+            <div class="essential-body container-info">
+                <div class="essential-body-items">
+                    <img class="essential-image" src="./images/Essential/1.jpg" alt="essential-image" width="387"
+                        height="387" loading="lazy">
+                    <span class="essential-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Essential show</h3>
+                    <div class="essential-description container-shadow">
+                        <div class="essential-description-episod play-description">
+                            <p>Episode 1 • Technology</p>
+                        </div>
+                        <h4 class="essential-description-title episod-title-line">SRKP selects: how <br> the new ages
+                            work</h4>
+                        <button class="essential-description-button" type="button">Share
+                            <svg class="essential-share-svg" fill="#000000" width="20" height="20" viewBox="-1 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path
+                                        d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-9.921-.516 2.865-1.811a1.83 1.83 0 1 0-.423-.67l-2.85 1.802a1.839 1.839 0 1 0 0 2.524l2.85 1.801a1.837 1.837 0 1 0 .423-.668l-2.865-1.812a1.85 1.85 0 0 0 0-1.166z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="essential-body-items">
+                    <img class="essential-image" src="./images/Essential/2.jpg" alt="essential-image" width="387"
+                        height="387" loading="lazy">
+                    <span class="essential-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Essential show</h3>
+                    <div class="essential-description container-shadow">
+                        <div class="essential-description-episod play-description">
+                            <p>Episode 2 • Technology</p>
+                        </div>
+                        <h4 class="essential-description-title episod-title-line">SRKP selects: a <br> new mindset today
+                        </h4>
+                        <button class="essential-description-button" type="button">Share
+                            <svg class="essential-share-svg" fill="#000000" width="20" height="20" viewBox="-1 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path
+                                        d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-9.921-.516 2.865-1.811a1.83 1.83 0 1 0-.423-.67l-2.85 1.802a1.839 1.839 0 1 0 0 2.524l2.85 1.801a1.837 1.837 0 1 0 .423-.668l-2.865-1.812a1.85 1.85 0 0 0 0-1.166z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="essential-body-items">
+                    <img class="essential-image" src="./images/Essential/3.jpg" alt="essential-image" width="387"
+                        height="387" loading="lazy">
+                    <span class="essential-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Essential show</h3>
+                    <div class="essential-description container-shadow">
+                        <div class="essential-description-episod play-description">
+                            <p>Episode 3 • Technology</p>
+                        </div>
+                        <h4 class="essential-description-title episod-title-line">SRKP selects: the latest <br> trends
+                            now</h4>
+                        <button class="essential-description-button" type="button">Share
+                            <svg class="essential-share-svg" fill="#000000" width="20" height="20" viewBox="-1 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path
+                                        d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-9.921-.516 2.865-1.811a1.83 1.83 0 1 0-.423-.67l-2.85 1.802a1.839 1.839 0 1 0 0 2.524l2.85 1.801a1.837 1.837 0 1 0 .423-.668l-2.865-1.812a1.85 1.85 0 0 0 0-1.166z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="essential-body-items">
+                    <img class="essential-image" src="./images/Essential/4.jpg" alt="essential-image" width="387"
+                        height="387" loading="lazy">
+                    <span class="essential-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Essential show</h3>
+                    <div class="essential-description container-shadow">
+                        <div class="essential-description-episod play-description">
+                            <p>Episode 4 • Technology</p>
+                        </div>
+                        <h4 class="essential-description-title episod-title-line">SRKP selects: organize <br> your day
+                        </h4>
+                        <button class="essential-description-button" type="button">Share
+                            <svg class="essential-share-svg" fill="#000000" width="20" height="20" viewBox="-1 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path
+                                        d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-9.921-.516 2.865-1.811a1.83 1.83 0 1 0-.423-.67l-2.85 1.802a1.839 1.839 0 1 0 0 2.524l2.85 1.801a1.837 1.837 0 1 0 .423-.668l-2.865-1.812a1.85 1.85 0 0 0 0-1.166z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="essential-body-items">
+                    <img class="essential-image" src="./images/Essential/5.jpg" alt="essential-image" width="387"
+                        height="387" loading="lazy">
+                    <span class="essential-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Essential show</h3>
+                    <div class="essential-description container-shadow">
+                        <div class="essential-description-episod play-description">
+                            <p>Episode 5 • Technology</p>
+                        </div>
+                        <h4 class="essential-description-title episod-title-line">SRKP selects: how to <br> plan your
+                            work</h4>
+                        <button class="essential-description-button" type="button">Share
+                            <svg class="essential-share-svg" fill="#000000" width="20" height="20" viewBox="-1 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path
+                                        d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-9.921-.516 2.865-1.811a1.83 1.83 0 1 0-.423-.67l-2.85 1.802a1.839 1.839 0 1 0 0 2.524l2.85 1.801a1.837 1.837 0 1 0 .423-.668l-2.865-1.812a1.85 1.85 0 0 0 0-1.166z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="essential-body-items">
+                    <img class="essential-image" src="./images/Essential/6.jpg" alt="essential-image" width="387"
+                        height="387" loading="lazy">
+                    <span class="essential-image-element headphones"><svg class="headphones-svg" viewBox="0 0 16 16"
+                            fill="none" width="17" height="22" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M3 7C3 4.23858 5.23858 2 8 2C10.7614 2 13 4.23858 13 7V8H10V15H12C13.6569 15 15 13.6569 15 12V7C15 3.13401 11.866 0 8 0C4.13401 0 1 3.13401 1 7V12C1 13.6569 2.34315 15 4 15H6V8H3V7Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <h3 class="visually-hidden">Essential show</h3>
+                    <div class="essential-description container-shadow">
+                        <div class="essential-description-episod play-description">
+                            <p>Episode 6 • Technology</p>
+                        </div>
+                        <h4 class="essential-description-title episod-title-line">SRKP selects: trying the <br> best
+                            phones</h4>
+                        <button class="essential-description-button" type="button">Share
+                            <svg class="essential-share-svg" fill="#000000" width="20" height="20" viewBox="-1 0 19 19"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g stroke-width="0"></g>
+                                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g>
+                                    <path
+                                        d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-9.921-.516 2.865-1.811a1.83 1.83 0 1 0-.423-.67l-2.85 1.802a1.839 1.839 0 1 0 0 2.524l2.85 1.801a1.837 1.837 0 1 0 .423-.668l-2.865-1.812a1.85 1.85 0 0 0 0-1.166z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="presentation">
+            <h2 class="visually-hidden">Video presentation</h2>
+            <video src="/" class="presentation-video" width="1920" height="711"
+                poster="./images/video-image.jpg"></video>
+            <button class="presentation-play-button play-button" type="button">
+                <svg class="presentation-play-button-svg" viewBox="-0.5 0 8 8" width="16" height="19" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <g stroke-width="0"></g>
+                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g>
+                        <title>play [#1001]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs> </defs>
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-427.000000, -3765.000000)" fill="#000000">
+                                <g transform="translate(56.000000, 160.000000)">
+                                    <polygon points="371 3605 371 3613 378 3609"> </polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </section>
+        <section class="hosts">
+            <header class="hosts-header container-podcast">
+                <h2 class="hosts-header-title">Meet your hosts:</h2>
+                <a class="hosts-link next-play link-episod" href="/">View all of them</a>
+            </header>
+            <div class="hosts-body container-info">
+                <div class="hosts-body-items">
+                    <img class="hosts-image" src="./images/hosts/1.jpg" alt="hosts-image" width="385" height="445"
+                        loading="lazy">
+                    <h3 class="visually-hidden">Hosts show</h3>
+                    <div class="hosts-description container-shadow">
+                        <h4 class="hosts-description-title">Bella Jimenez</h4>
+                        <div class="hosts-description-episod play-description">
+                            <p>Creative Strategist</p>
+                        </div>
+                        <div class="hosts-description-soc1als">
+                            <a href="https://www.facebook.com/" target="_blank"><svg
+                                    class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512"
+                                    xml:space="preserve">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M169.5,357.6l-2.9,38.3h-39.3 v133H77.7v-133H51.2v-38.3h26.5v-25.7c0-11.3,0.3-28.8,8.5-39.7c8.7-11.5,20.6-19.3,41.1-19.3c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2 c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank"><svg
+                                    class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512"
+                                    xml:space="preserve">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z ">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <svg class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hosts-body-items">
+                    <img class="hosts-image" src="./images/hosts/2.jpg" alt="hosts-image" width="385" height="445"
+                        loading="lazy">
+                    <h3 class="visually-hidden">Hosts show</h3>
+                    <div class="hosts-description container-shadow">
+                        <h4 class="hosts-description-title">Edwin Watson</h4>
+                        <div class="hosts-description-episod play-description">
+                            <p>Creative Strategist</p>
+                        </div>
+                        <div class="hosts-description-soc1als">
+                            <a href="https://www.facebook.com/" target="_blank"><svg
+                                    class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512"
+                                    xml:space="preserve">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M169.5,357.6l-2.9,38.3h-39.3 v133H77.7v-133H51.2v-38.3h26.5v-25.7c0-11.3,0.3-28.8,8.5-39.7c8.7-11.5,20.6-19.3,41.1-19.3c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2 c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank"><svg
+                                    class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512"
+                                    xml:space="preserve">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z ">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <svg class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hosts-body-items">
+                    <img class="hosts-image" src="./images/hosts/3.jpg" alt="hosts-image" width="385" height="445"
+                        loading="lazy">
+                    <h3 class="visually-hidden">Hosts show</h3>
+                    <div class="hosts-description container-shadow">
+                        <h4 class="hosts-description-title">Caitlin Henderson</h4>
+                        <div class="hosts-description-episod play-description">
+                            <p>Creative Strategist</p>
+                        </div>
+                        <div class="hosts-description-soc1als">
+                            <a href="https://www.facebook.com/" target="_blank"><svg
+                                    class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512"
+                                    xml:space="preserve">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M169.5,357.6l-2.9,38.3h-39.3 v133H77.7v-133H51.2v-38.3h26.5v-25.7c0-11.3,0.3-28.8,8.5-39.7c8.7-11.5,20.6-19.3,41.1-19.3c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2 c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank"><svg
+                                    class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512"
+                                    xml:space="preserve">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z ">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <svg class="hosts-description-soc1als-svg" fill="#000000" height="22px" width="22px"
+                                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-header footer-container">
+            <div class="footer-header-logo">
+                <a class="footer-header-logo" href="/">
+                    <img src="./images/logo-footer.jpg" alt="Podcast logo" width="148" height="24" loading="lazy">
+                </a>
+                <p class="footer-header-description">The great connection.</p>
+            </div>
+            <div class="footer-description">
+                <h4 class="footer-description-text">We collaborate with ambitious brands and people; <br> let’s build
+                    something great together.
+                </h4>
+            </div>
+        </div>
+        <div class="footer-body footer-container">
+            <div class="footer-body-column">
+                <h5 class="footer-body-column-title">Start a conversation:</h5>
+                <a class="footer-body-column-link" href="mailto:podcast@example.com">podcast@example.com</a>
+                <a class="footer-body-column-link" href="tel:+29698667033">+2 969 866 7033</a>
+                <a class="footer-body-column-extra" href="/">Terms & Conditions</a>
+            </div>
+            <div class="footer-body-column">
+                <h5 class="footer-body-column-title">Find us here:</h5>
+                <address class="footer-body-column-address">
+                    Brooklyn, NY 11201 <br>
+                    United States
+                </address>
+                <a class="footer-body-column-extra" href="/">Privacy Policy</a>
+            </div>
+            <div class="footer-body-column">
+                <h5 class="footer-body-column-title">Follow us on:</h5>
+                <div class="footer-body-column-soc1als">
+                    <ul class="footer-body-column-soc1als-list">
+                        <li class="footer-body-column-soc1als-item">
+                            <a class="footer-body-column-soc1als-link" href="https://www.facebook.com/" target="_blank">
+                                <svg class="footer-body-column-soc1als-link-svg" fill="#000000" width="21" height="21"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke-width="0"></g>
+                                    <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g>
+                                        <path
+                                            d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-body-column-soc1als-item">
+                            <a class="footer-body-column-soc1als-link" href="https://x.com/" target="_blank">
+                                <svg class="footer-body-column-soc1als-link-svg" width="21" height="21" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;"
+                                    xml:space="preserve">
+                                    <g id="XMLID_826_">
+                                        <path id="XMLID_827_"
+                                            d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73 c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783 c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598 C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467 c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977 c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889 c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597 c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961 c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895 c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367 c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998 C307.394,57.037,305.009,56.486,302.973,57.388z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-body-column-soc1als-item">
+                            <a class="footer-body-column-soc1als-link" href="https://www.instagram.com/"
+                                target="_blank">
+                                <svg class="footer-body-column-soc1als-link-svg" width="21" height="21" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 169.063 169.063"
+                                    style="enable-background:new 0 0 169.063 169.063;" xml:space="preserve">
+                                    <g>
+                                        <path
+                                            d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752 c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407 c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752 c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
+                                        <path
+                                            d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561 C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561 c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z" />
+                                        <path
+                                            d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78 c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78 C135.661,29.421,132.821,28.251,129.921,28.251z" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-body-column-soc1als-item">
+                            <a class="footer-body-column-soc1als-link" href="https://www.youtube.com/" target="_blank">
+                                <svg class="footer-body-column-soc1als-link-svg" width="21" height="21" id="Bold"
+                                    enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m23.469 5.929.03.196c-.29-1.029-1.073-1.823-2.068-2.112l-.021-.005c-1.871-.508-9.4-.508-9.4-.508s-7.51-.01-9.4.508c-1.014.294-1.798 1.088-2.083 2.096l-.005.021c-.699 3.651-.704 8.038.031 11.947l-.031-.198c.29 1.029 1.073 1.823 2.068 2.112l.021.005c1.869.509 9.4.509 9.4.509s7.509 0 9.4-.509c1.015-.294 1.799-1.088 2.084-2.096l.005-.021c.318-1.698.5-3.652.5-5.648 0-.073 0-.147-.001-.221.001-.068.001-.149.001-.23 0-1.997-.182-3.951-.531-5.846zm-13.861 9.722v-7.293l6.266 3.652z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer-body-column-copyright">© 2021 Qode Interactive. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
