@@ -1444,6 +1444,10 @@ h5 {
             ". . ."
     }
 
+    .podcast-link {
+        transform: translateY(87px);
+    }
+
     .podcast-image {
         width: 110px;
         height: auto;
@@ -1541,7 +1545,7 @@ h5 {
         column-gap: 0.91vw;
         width: 11vw;
         margin-block: 2vw 3vw;
-        font-size: 1.82vw;
+        font-size: clamp(8px, 1.82vw, 14px);
     }
 
     .essential-share-svg {
