@@ -995,7 +995,7 @@ h5 {
 @media (max-width: 1300px) {
 
     .link-episod {
-        font-size: 1.2vw;
+        font-size: clamp(8px, 1.2vw, 15px);
     }
 
     .next-play::after {
@@ -1070,11 +1070,11 @@ h5 {
 @media (max-width: 1024px) {
 
     h2 {
-        font-size: 33px;
+        font-size: clamp(25px, 3.22vw, 33px);
     }
 
     .play-description {
-        font-size: 1.36vw;
+        font-size: clamp(9px, 1.36vw, 14px);
     }
 
     .headphones {
@@ -1377,10 +1377,15 @@ h5 {
         margin-top: 0;
     }
 
-    .header-navigation-list,
+    .header-navigation-list {
+        width: 285px;
+        column-gap: 2.5vw;
+        font-size: clamp(10px, 1.95vw, 15px);
+    }
+
     .header-actions-form {
-        column-gap: 1.5vw;
-        font-size: 2vw;
+        column-gap: 1.7vw;
+        font-size: clamp(10px, 1.95vw, 15px);
     }
 
     .header-actions {
@@ -1397,7 +1402,7 @@ h5 {
 
     .header-actions-search-button-img {
         position: relative;
-        width: 2vw;
+        width: clamp(10px, 2vw, 15px);
         aspect-ratio: 1;
         left: 10px;
     }
@@ -1414,7 +1419,7 @@ h5 {
     }
 
     .hero-info-title {
-        font-size: clamp(1px, 4vw, 40px);
+        font-size: 3.9vw;
         margin: 0;
     }
 
@@ -1424,7 +1429,7 @@ h5 {
     }
 
     .hero-info-link {
-        padding-top: 5px;
+        padding-top: 14px;
         row-gap: 3px;
     }
 
