@@ -448,14 +448,12 @@ h5 {
     max-width: var(--container-podcast-width);
     height: auto;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .container-info {
     max-width: var(--container-podcast-info-width);
     height: auto;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .podcast {
